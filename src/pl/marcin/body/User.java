@@ -24,6 +24,13 @@ public class User {
         return role;
     }
 
+    public User(int id, String name, int age, String role) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.role = role;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,5 +41,15 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getName(), getAge(), getRole());
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", role='" + role + '\'' +
+                '}';
     }
 }

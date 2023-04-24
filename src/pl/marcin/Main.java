@@ -1,13 +1,13 @@
 package pl.marcin;
 
 import pl.marcin.body.User;
-import pl.marcin.repository.UserRepositoryImpl;
+import pl.marcin.repository.DefaultUserRepository;
 import pl.marcin.service.UserService;
 
 public class Main {
     public static void main(String[] args) {
 
-        UserService userService = new UserService(new UserRepositoryImpl());
+        UserService userService = new UserService(new DefaultUserRepository());
         userService.createUser(1,"Jan",25,"user");
         userService.createUser(2,"Ola",25,"admin");
         userService.createUser(3,"Krzyś",25,"user");

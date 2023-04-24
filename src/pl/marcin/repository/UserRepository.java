@@ -5,10 +5,14 @@ import pl.marcin.body.User;
 import java.util.List;
 
 public interface UserRepository {
-    void save(User user);
-    void delete(int id);
-    void update(int id,User user);
-    User findById(int id);
-    List<User>findAll();
+    void save(User newUser);
+
+    void delete(int userId);
+
+    void update(int userId, User user);
+
+    User findById(int userId);
+
+    List<User> findAll();
 
 }
